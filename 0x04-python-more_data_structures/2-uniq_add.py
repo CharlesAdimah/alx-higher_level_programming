@@ -1,14 +1,9 @@
 #!/usr/bin/python3
-
 def uniq_add(my_list=[]):
-    """
-    sum the unique elements of my_list
-    """
-    if my_list is None:
-        return None
-    return sum(set(my_list))
+    uniq_list = set(my_list)
+    num = 0
 
-if __name__ == '__main__':
-    my_list = [1, 2, 3, 1, 4, 2, 5]
-    result = uniq_add(my_list)
-    print("Result: {:d}".format(result))
+    for i in uniq_list:
+        num += i
+
+    return (num)
